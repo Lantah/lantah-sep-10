@@ -16,7 +16,7 @@
     "posttest": "npm run lint"
   },
   "peerDependencies": {
-    "@lantah/lantah-sdk": "^11.0.0-beta.4",
+    "@lantah/lantah-sdk": "^11.0.0-beta.4"
   },
   "dependencies": {
     "axios": "^0.21.1",
