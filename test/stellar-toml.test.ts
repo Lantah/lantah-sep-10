@@ -1,9 +1,9 @@
 import test from "ava"
-import { Server } from "stellar-sdk"
+import { Server } from "@lantah/lantah-sdk"
 import { fetchWebAuthData } from "../src/index"
 
 test("fetchWebAuthData() can fetch the stellarport.io auth endpoint URL", async t => {
-  const horizon = new Server("https://horizon.stellar.org/")
+  const horizon = new Server("https://orbitr.lantah.network/")
   const webauth = await fetchWebAuthData(
     horizon,
     "GBVOL67TMUQBGL4TZYNMY3ZQ5WGQYFPFD5VJRWXR72VA33VFNL225PL5"

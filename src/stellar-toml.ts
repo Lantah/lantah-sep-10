@@ -1,4 +1,4 @@
-import { Server, StellarTomlResolver } from "stellar-sdk"
+import { Server, StellarTomlResolver } from "@lantah/lantah-sdk"
 import { debug } from "./logger"
 
 export interface WebauthData {

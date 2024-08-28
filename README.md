@@ -1,4 +1,4 @@
-# @satoshipay/stellar-sep-10
+# @lantah/lantah-sep-10
 
 [Stellar Ecosystem Proposal 10 - "Stellar Web Authentication"](https://github.com/stellar/stellar-protocol/blob/master/ecosystem/sep-0010.md) client SDK, allowing Stellar wallets to authenticate for a web service using an account's private key.
 
@@ -7,9 +7,9 @@
 ## Installation
 
 ```
-npm install @satoshipay/stellar-sep-10
+npm install @lantah/lantah-sep-10
 # or with yarn:
-yarn add @satoshipay/stellar-sep-10
+yarn add @lantah/lantah-sep-10
 ```
 
 ## Usage
@@ -18,8 +18,8 @@ yarn add @satoshipay/stellar-sep-10
 
 ```ts
 // Look up the stellar.toml for an issuing account, parse it, return data
-import { Server } from "stellar-sdk"
-import { fetchWebAuthData } from "@satoshipay/stellar-sep-10"
+import { Server } from "@lantah/lantah-sdk"
+import { fetchWebAuthData } from "@lantah/lantah-sep-10"
 
 const horizon = new Server("https://stellar-horizon.satoshipay.io/")
 const issuingAccountID =
@@ -35,7 +35,7 @@ Alternatively, if you already fetched and parsed the stellar.toml file:
 import {
   getServiceSigningKey,
   getWebAuthEndpointURL
-} from "@satoshipay/stellar-sep-10"
+} from "@lantah/lantah-sep-10"
 
 const stellarToml = {
   // Parsed stellar.toml content fetched from remote...
@@ -48,8 +48,8 @@ const signingKey = getServiceSigningKey(stellarToml)
 ### Authenticate - The simple way
 
 ```ts
-import { Keypair } from "stellar-sdk"
-import { authenticate } from "@satoshipay/stellar-sep-10"
+import { Keypair } from "@lantah/lantah-sdk"
+import { authenticate } from "@lantah/lantah-sep-10"
 
 // see above how to obtain `webauth`
 const accountKeypair = Keypair.fromSecret("S...")
@@ -71,8 +71,8 @@ Authorization: Bearer ${jwt}
 ### Authenticate - The manual way
 
 ```ts
-import { Keypair } from "stellar-sdk"
-import { authenticate } from "@satoshipay/stellar-sep-10"
+import { Keypair } from "@lantah/lantah-sdk"
+import { authenticate } from "@lantah/lantah-sep-10"
 
 // see above how to obtain `webauth`
 const accountKeypair = Keypair.fromSecret("S...")

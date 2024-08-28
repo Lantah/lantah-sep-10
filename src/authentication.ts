@@ -1,5 +1,5 @@
 import axios, { AxiosResponse } from "axios"
-import { Keypair, Networks, Operation, Transaction } from "stellar-sdk"
+import { Keypair, Networks, Operation, Transaction } from "@lantah/lantah-sdk"
 import { debug } from "./logger"
 
 function assertChallengeOK(
